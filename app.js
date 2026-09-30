@@ -32,7 +32,6 @@ function formatDateTime(date) {
     return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
 }
 
-// Логирует каждый запрос в формате: HTTP Method | URL | Date and Time
 function logRequest(req) {
     console.log(`${req.method} ${req.url} | ${formatDateTime(new Date())}`);
 }
@@ -69,7 +68,6 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(COURSES));
     }
     else if (req.method === 'GET' && req.url === '/api/fact') {
-        // Собственный маршрут: возвращает случайный факт о Node.js в формате JSON
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
         const fact = FACTS[Math.floor(Math.random() * FACTS.length)];
         res.end(JSON.stringify({ fact }));
