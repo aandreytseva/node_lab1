@@ -1,0 +1,16 @@
+{
+  "name": "lab1-andreiteva-anastasia",
+  "version": "1.0.0",
+  "description": "Laboratory work #1 - simple HTTP server on Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "lab1"
+  ],
+  "author": "Andreiteva Anastasia, IAFR-2302",
+  "license": "ISC"
+}
